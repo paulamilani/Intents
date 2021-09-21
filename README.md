@@ -1,5 +1,6 @@
 # Intents
 SDM - PA1 Aula 6
+
 Crie um projeto chamado Intents que implemente exatamente o projeto desenvolvido
 durante a aula síncrona. A única diferença é que o projeto deve ser desenvolvido em
 linguagem Java, já que o projeto de aula foi desenvolvido em linguagem Kotlin. O
