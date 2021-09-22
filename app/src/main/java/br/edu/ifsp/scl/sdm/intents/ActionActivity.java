@@ -1,29 +1,27 @@
 package br.edu.ifsp.scl.sdm.intents;
 
-import static android.icu.number.NumberFormatter.with;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-public class ActionActivity extends AppCompatActivity implements View.OnClickListener {
+import br.edu.ifsp.scl.sdm.intents.databinding.ActivityActionBinding;
 
-    private ActivityMainBinding activityMainBinding;
+public class ActionActivity extends AppCompatActivity {
+
+    private ActivityActionBinding activityActionBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(activityMainBinding.getRoot());
+        activityActionBinding = ActivityActionBinding.inflate(getLayoutInflater());
+        setContentView(activityActionBinding.getRoot());
 
+        activityActionBinding.mainTb.appTb.setTitle("intents");
+        activityActionBinding.mainTb.appTb.setSubtitle("intents");
+        setSupportActionBar(activityActionBinding.mainTb.appTb);
+        activityActionBinding.parameterTv.setText(getIntent().getStringExtra(Intent.EXTRA_TEXT));
 
-    }
-
-    @Override
-    public void onClick(View view) {
 
     }
 }
